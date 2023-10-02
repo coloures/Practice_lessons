@@ -1,0 +1,25 @@
+2nd problem
+using System;
+class HelloWorld {
+  static void Main() {
+    int sum = 0;
+    int first = 0;
+    int second = 1;
+    do 
+    {
+        Console.WriteLine($"first: {first}; second: {second}");
+        if (first < second)
+        {
+            first += second;
+        }
+        else
+        {
+            second += first;
+        }
+        sum = Math.Max(first, second)%2 ==0 ? sum + Math.Max(first, second) : sum;
+    }
+    while (first < 4000000);
+    Console.WriteLine(sum);
+    
+  }
+}
